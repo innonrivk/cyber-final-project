@@ -135,6 +135,7 @@ class DataBase:
         :return: confirmation message (used for debug)
         :rtype: str
         """
+        
         if self.check_addcol(add):
             col = self._addcol_dic.get(add)
             resp = col.find_one_and_delete({"ip": ip})
